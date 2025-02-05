@@ -7,41 +7,76 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212; /* Cor escura */
+            color: white;
         }
+
         .login-box {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             max-width: 400px;
-            margin: 0 auto;
+            width: 100%;
+            text-align: center;
         }
-        input, button {
+
+        h1 {
+            color: #8a2be2; /* Roxo chamativo */
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 90%;
             padding: 10px;
-            margin: 10px;
-            width: 80%;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 95%;
+            padding: 10px;
+            background-color: #8a2be2;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #6c1bb5;
         }
     </style>
 </head>
 <body>
     <div class="login-box">
         <h1>Acesso à Transmissão</h1>
+        <input type="text" id="usuario" placeholder="Digite o usuário">
         <input type="password" id="senha" placeholder="Digite a senha">
-        <button onclick="verificarSenha()">Acessar</button>
+        <button onclick="verificarAcesso()">Acessar</button>
     </div>
 
     <script>
-        function verificarSenha() {
-            const senhaCorreta = "transmissao123"; // Altere para sua senha
+        function verificarAcesso() {
+            const usuarioCorreto = "admin"; // Usuário correto
+            const senhaCorreta = "transmissao123"; // Senha correta
+            const usuarioDigitado = document.getElementById("usuario").value;
             const senhaDigitada = document.getElementById("senha").value;
 
-            if (senhaDigitada === senhaCorreta) {
-                window.location.href = "transmissao.html"; // Página do player
+            if (usuarioDigitado === usuarioCorreto && senhaDigitada === senhaCorreta) {
+                window.location.href = "transmissao.html"; // Redireciona para a página do player
             } else {
-                alert("Senha incorreta!");
+                alert("Usuário ou senha incorretos!");
             }
         }
     </script>
