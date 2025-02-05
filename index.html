@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transmissão Ao Vivo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f0f0f0;
+        }
+        .login-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>Acesso à Transmissão</h1>
+        <input type="password" id="senha" placeholder="Digite a senha">
+        <button onclick="verificarSenha()">Acessar</button>
+    </div>
+
+    <script>
+        function verificarSenha() {
+            const senhaCorreta = "transmissao123"; // Altere para sua senha
+            const senhaDigitada = document.getElementById("senha").value;
+
+            if (senhaDigitada === senhaCorreta) {
+                window.location.href = "transmissao.html"; // Página do player
+            } else {
+                alert("Senha incorreta!");
+            }
+        }
+    </script>
+</body>
+</html>
