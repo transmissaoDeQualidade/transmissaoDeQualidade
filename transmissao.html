@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transmissão Ao Vivo</title>
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Transmissão Ao Vivo</h1>
+    <video id="my-video" class="video-js" controls preload="auto" width="640" height="360">
+        <source src="SEU_LINK_HLS" type="application/x-mpegURL">
+    </video>
+    <script src="https://vjs.zencdn.net/7.15.4/video.js"></script>
+    <script>
+        var player = videojs('my-video');
+    </script>
+</body>
+</html>
