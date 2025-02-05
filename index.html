@@ -13,8 +13,42 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             background-color: #121212; /* Cor escura */
             color: white;
+        }
+
+        .info-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .info-container h2 {
+            font-size: 1.8rem;
+            color: #8a2be2; /* Roxo chamativo */
+            margin: 0;
+        }
+
+        .benefits {
+            margin: 15px 0;
+            font-size: 1rem;
+            color: #bdbdbd; /* Cinza claro */
+        }
+
+        .benefits span {
+            display: inline-block;
+            margin: 10px 0;
+            background: rgba(138, 43, 226, 0.2); /* Fundo leve roxo */
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .benefits p {
+            margin-top: 20px;
+            font-style: italic;
+            color: #ffcccb; /* Vermelho suave */
         }
 
         .login-box {
@@ -59,6 +93,18 @@
     </style>
 </head>
 <body>
+    <!-- Informações da Transmissão -->
+    <div class="info-container">
+        <h2>TRANSMISSÃO HOJE ÀS 21:30H: BEBETO X LIMONETO</h2>
+        <div class="benefits">
+            <span>Sem Anúncios</span>
+            <span>Sem Travamentos</span>
+            <span>Ótima Qualidade</span>
+            <p>OBS: Garante o teu acesso! Para manter a qualidade, os acessos são limitados.</p>
+        </div>
+    </div>
+
+    <!-- Área de Login -->
     <div class="login-box">
         <h1>Acesso à Transmissão</h1>
         <input type="text" id="usuario" placeholder="Digite o usuário">
